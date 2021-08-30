@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f0ea;
+}
+
+header {
+    width: 100%;
+    height: 3rem;
+    /* background-color: #ffb92c; */
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nose {
+    list-style: none;
+    margin-right: 1rem;
+    width: 100px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffb92c;
+}
+
+.nose li a {
+    font-size: 25px;
+    color: #F3F0D7;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nose li a:hover{
+    color: #115246;
+}
+
+.eyes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(100px, auto);
+}
+
+.face img{
+    padding: 10px;
+    width: 100%;
+}
+
+.lips {
+    padding: 10px;
+}
+
+.lips h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.lips p {
+    text-align: justify;
+}
+
+.ears {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    background-color: #f3f0ea;
+}
+
+.ears article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.ears article h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.ears article p {
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.ears article button {
+    text-align: center;
+    width: 70px;
+    height: 2rem;
+    border: none;
+    cursor: pointer;
+    background-color: #1ccc74;
+    color: #F3F0D7;
+    transition: all 0.5s ease;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ears article button:hover {
+    background-color: #050505;
+    color: #F3F0D7;
+}
+
+.ears article img {
+    width: 100%;
+    height: 280px;
+    border-radius: 2%;
+}
+
+footer {
+    background-color: black;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.fadeIn {
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+
+    /*LOS COSAS PARA LOS NAVEGADORES*/
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInDown {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInDown;
+
+    /*LOS COSAS PARA LOS NAVEGADORES*/
+    -webkit-animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+    from{
+        opacity: 0;
+        -webkit-transform: translate3d(0,-100%,0);
+        transform: translate3d(0,-100%,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0, 0, 0);
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-color: #fffcf5;;
+    }
+    .face {
+        grid-column: 1/3;
+    }
+    
+    .face img {
+        width: 100%;
+        height: auto;
+    }
+
+    .lips {
+        grid-column: 1 /-1;
+        padding-top: 0;
+    }
+
+    .ears article {
+        grid-column: 1 /-1;
+    }
+}

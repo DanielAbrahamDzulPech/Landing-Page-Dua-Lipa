@@ -1,0 +1,15 @@
+{
+  "name": "grid-dua-lipa",
+  "version": "1.0.0",
+  "description": "The landing page with CSS GRID",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dua",
+    "lipa"
+  ],
+  "author": "Daniel Abraham Dzul Pech",
+  "license": "ISC"
+}
